@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR 360 Viewer</title>
+    <link rel="stylesheet" href="assets/css/vr.css">
+    
+</head>
+<body>
+    <!-- Thanh menu trên cùng -->
+    <header id="menu">
+        <h1>VR 360 Viewer</h1>
+        <button id="autoRotateBtn">Start Auto Rotate</button>
+    </header>
+
+    <!-- Canvas hiển thị hình ảnh 360 -->
+    <div id="viewer-container">
+        <canvas id="vrCanvas"></canvas>
+        <div id="instructions">Click and drag to explore the 360 view</div>
+    </div>
+
+    <!-- Container cho thanh chọn ảnh (di chuyển xuống dưới góc trái) -->
+    <div id="imageSelectorContainer">
+        <select id="imageSelector">
+            <option value="assets/Image/panorama1.jpg">Panorama 1</option>
+            <option value="assets/Image/panorama2.jpg">Panorama 2</option>
+        </select>
+    </div>
+
+    <!-- Thanh điều hướng -->
+    <div class="w3-top">
+        <div class="w3-bar">
+            <a href="#home" class="w3-bar-item">Home</a>
+            <a href="#about" class="w3-bar-item">About</a>
+
+            <!-- Danh sách phòng -->
+            <div class="dropdown">
+                <a href="#" class="w3-bar-item">Rooms</a>
+                <div class="dropdown-content">
+                    <a href="#" onclick="changeRoom('phong-khach.xml')">Phòng khách</a>
+                    <a href="#" onclick="changeRoom('phong-bep.xml')">Phòng bếp</a>
+                    <a href="#" onclick="changeRoom('phong-ngu.xml')">Phòng ngủ</a>
+                </div>
+            </div>
+
+            <a href="#contact" class="w3-bar-item">Contact</a>
+        </div>
+    </div>
+
+    <!-- Tệp JavaScript -->
+    <script src="assets/js/vr.js"></script>
+</body>
+</html>
